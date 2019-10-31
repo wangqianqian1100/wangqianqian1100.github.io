@@ -1,0 +1,2 @@
+webpackJsonp([5],{Jh8f:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var i={render:function(){this.$createElement;this._self._c;return this._m(0)},staticRenderFns:[function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticClass:"notFond"},[e("img",{attrs:{src:"http://sucai.weizaojiao.cn/image/block/404ym.png",alt:""}})])}]};var s=n("C7Lr")({},i,!1,function(t){n("YnDZ")},"data-v-263d5580",null);e.default=s.exports},YnDZ:function(t,e){}});
+//# sourceMappingURL=5.a676ddd2483bbca0fd2c.js.map
