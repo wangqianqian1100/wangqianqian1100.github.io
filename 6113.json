@@ -1,0 +1,144 @@
+{
+    "data": {
+        "totalCount":"12",
+        "dataLists": [
+            {
+                "consName": "用户名称1",
+                "consNo": "用户编号1",
+                "elecAddr": "用电地址1",
+                "accountBalance":"账户余额1",
+                "oweBalance":"欠费余额1",
+                "yearQuantity":"年累计电量1",
+                "calculateFee": "测算电费1",
+                "cutOffTime": "截止时间1",
+
+                "monthQuaFeeLists": [
+                   {
+                        "month":"月份A",
+                        "monQuantity":"电量A",
+                        "monFee":"电费A",
+                        "elecTypeLists":[
+                            {
+                                "type":1,
+                                "typeQuantity":"电量a峰",
+                                "typeFee":"电费a峰"
+                            },
+                            {
+                                "type":3,
+                                "typeQuantity":"电量a平",
+                                "typeFee":"电费a平"
+                            },
+                            {
+                                "type":2,
+                                "typeQuantity":"电量a谷",
+                                "typeFee":"电费a谷"
+                            }
+                        ]
+                    },
+                    {
+                        "month":"月份B",
+                        "monQuantity":"电量B",
+                        "monFee":"电费B",
+                        "elecTypeLists":[
+                            {
+                                "type":1,
+                                "typeQuantity":"电量b峰",
+                                "typeFee":"电费b峰"
+                            },
+                            {
+                                "type":3,
+                                "typeQuantity":"电量b平",
+                                "typeFee":"电费b平"
+                            },
+                            {
+                                "type":2,
+                                "typeQuantity":"电量b谷",
+                                "typeFee":"电费b谷"
+                            }
+                        ]
+                    }
+                ],
+                "DayQuaFeeLists":[
+                    {
+                        "date":"日期1",
+                        "dayQuantity":"电量1"
+                    },
+                    {
+                        "date":"日期2",
+                        "dayQuantity":"电量2"
+                    }
+                ]
+            },
+            {
+                "consName": "用户名称2",
+                "consNo": "用户编号2",
+                "elecAddr": "用电地址2",
+                "accountBalance":"账户余额2",
+                "oweBalance":"欠费余额2",
+                "yearQuantity":"年累计电量2",
+                "calculateFee": "测算电费2",
+                "cutOffTime": "截止时间2",
+
+                "monthQuaFeeLists": [
+                   {
+                        "month":"月份2A",
+                        "monQuantity":"电量2A",
+                        "monFee":"电费2A",
+                        "elecTypeLists":[
+                            {
+                                "type":1,
+                                "typeQuantity":"电量2a峰",
+                                "typeFee":"电费2a峰"
+                            },
+                            {
+                                "type":3,
+                                "typeQuantity":"电量2a平",
+                                "typeFee":"电费2a平"
+                            },
+                            {
+                                "type":2,
+                                "typeQuantity":"电量2a谷",
+                                "typeFee":"电费2a谷"
+                            }
+                        ]
+                    },
+                    {
+                        "month":"月份2B",
+                        "monQuantity":"电量2B",
+                        "monFee":"电费2B",
+                        "elecTypeLists":[
+                            {
+                                "type":1,
+                                "typeQuantity":"电量2b峰",
+                                "typeFee":"电费2b峰"
+                            },
+                            {
+                                "type":3,
+                                "typeQuantity":"电量2b平",
+                                "typeFee":"电费2b平"
+                            },
+                            {
+                                "type":2,
+                                "typeQuantity":"电量2b谷",
+                                "typeFee":"电费2b谷"
+                            }
+                        ]
+                    }
+                ],
+                "DayQuaFeeLists":[
+                    {
+                        "date":"日期21",
+                        "dayQuantity":"电量21"
+                    },
+                    {
+                        "date":"日期22",
+                        "dayQuantity":"电量22"
+                    }
+                ]
+            }
+        ]
+    },
+    "result": 1,
+    "returnCode": 1000,
+    "returnMSG": "接口调用成功"
+}
