@@ -174,9 +174,7 @@ $(function() {
 	w.load("<div class='writecode'>前端/NodeJS 开发工程师</div></p>");
 	w.load("<h1 class='writecode'>联系我</h1>");
 	w.load("<ul>");
-	w.load("<li class='writecode'>mail:114413511@qq.com</li>");
-	w.load("<li class='writecode'>blog:<a href='http://blog.youlunshidai.com' target='_blank'>blog.youlunshidai.com</a></li>");
-	w.load("<li class='writecode'>github:<a href='https://github.com/ccfromstar' target='_blank'>https://github.com/ccfromstar</a></li>");
+	w.load("<li class='writecode'>mail:893030579@qq.com</li>");
 	w.load("</ul>");
 	w.load("<h1 class='writecode'>技能</h1>");
 	w.load("<ul>");
@@ -261,8 +259,7 @@ $(function() {
 	c.load("<div class='comment writecode'>&nbsp;*这样基本上就差不多了</div>");
 	c.load("<div class='comment writecode'>&nbsp;*");
 	c.load("<div class='comment writecode'>&nbsp;*如果你想和我联系</div>");
-	c.load("<div class='comment writecode'>&nbsp;*QQ/微信:893030579</div>");
-	c.load("<div class='comment writecode'>&nbsp;*mobile:13611847679</div>");
+	c.load("<div class='comment writecode'>&nbsp;*QQ:893030579</div>");
 	c.load("<div class='comment writecode'>&nbsp;*最后非常感谢您愿意花3分钟看完我的简历！</div>");
 	c.load("<div class='comment writecode'>&nbsp;*/</div></p>");
 
