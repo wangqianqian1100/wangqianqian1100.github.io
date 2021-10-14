@@ -174,7 +174,8 @@ $(function() {
 	w.load("<div class='writecode'>前端/NodeJS 开发工程师</div></p>");
 	w.load("<h1 class='writecode'>联系我</h1>");
 	w.load("<ul>");
-	w.load("<li class='writecode'>mail:893030579@qq.com</li>");
+	w.load("<li class='writecode'>mail:17343030061@163.com</li>");
+	w.load("<li class='writecode'>qq:893030579</li>");
 	w.load("<li class='writecode'>vx:17343030061</li>");
 	w.load("</ul>");
 	w.load("<h1 class='writecode'>技能</h1>");
@@ -186,6 +187,7 @@ $(function() {
 	w.load("<li class='writecode'>熟练运用各种 UI 框架或者自定义 rem 设置实现 PC 端或者移动端的响应式布局。</li>");
 	w.load("<li class='writecode'>熟练使用各种第三方插件库。</li>");
 	w.load("<li class='writecode'>熟练使用Sass、Less预处理器执行编译CSS</li>");
+	w.load("<li class='writecode'>熟练使用 ES6。");
 	w.load("<li class='writecode'>掌握Vue的MVVM机制、组件化应用，有独立自主搭建Vue-Cli脚手架开发项目经验，能用Element UI和Mint-Ui等其他要求的UI框架实现页面布局</li>");
 	w.load("<li class='writecode'>对Node.js有一定的了解</li>");
 	w.load("<li class='writecode'>熟练使用Git相关管理控制工具</li>");
