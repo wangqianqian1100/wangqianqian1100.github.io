@@ -2,7 +2,7 @@ $(function() {
 	var c = new Coder("style-text");
 	c.load("<p><div class='bef_comment writecode'>/**</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*</div>");
-	c.load("<div class='bef_comment writecode'>&nbsp;*hi,我的名字叫王乾乾，是北京一家互联网创业公司的web前端工程师</div>");
+	c.load("<div class='bef_comment writecode'>&nbsp;*hi,我的名字叫王乾乾，是北京一家互联网公司的web前端工程师</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*我的主要工作是编写前端页面以及交互</div>",2000);
 	c.load("<div class='bef_comment writecode'>&nbsp;*让我们来点实际的，看看我能做些什么</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*/</div></p>");
@@ -170,16 +170,21 @@ $(function() {
 	var w = new Coder("md");
 	w.load("<h1 class='writecode'>简历</h1>");
 	w.load("<p><div class='writecode'>王乾乾</div>");
-	w.load("<div class='writecode'>web前端开发工程师(北京德成鸿业有限责任公司)</div>");
+	w.load("<div class='writecode'>web前端开发工程师(神州数码信息服务股份有限公司)</div>");
 	w.load("<div class='writecode'>前端/NodeJS 开发工程师</div></p>");
 	w.load("<h1 class='writecode'>联系我</h1>");
 	w.load("<ul>");
 	w.load("<li class='writecode'>mail:893030579@qq.com</li>");
+	w.load("<li class='writecode'>vx:17343030061</li>");
 	w.load("</ul>");
 	w.load("<h1 class='writecode'>技能</h1>");
 	w.load("<ul>");
+	w.load("<li class='writecode'>熟悉 W3C 标准。");
 	w.load("<li class='writecode'>精通CSS+DIV页面布局，能熟练运用HTML/CSS/HTML5/CSS3/JavaScript/jQuery技术，开发符合设计的网站页面</li>");
 	w.load("<li class='writecode'>熟练运用各种UI框架实现PC端或者移动端的响应式布局</li>");
+	w.load("<li class='writecode'>熟练使用 ajax,比如 axios 和$.ajax 等其他方式的请求库。</li>");
+	w.load("<li class='writecode'>熟练运用各种 UI 框架或者自定义 rem 设置实现 PC 端或者移动端的响应式布局。</li>");
+	w.load("<li class='writecode'>熟练使用各种第三方插件库。</li>");
 	w.load("<li class='writecode'>熟练使用Sass、Less预处理器执行编译CSS</li>");
 	w.load("<li class='writecode'>掌握Vue的MVVM机制、组件化应用，有独立自主搭建Vue-Cli脚手架开发项目经验，能用Element UI和Mint-Ui等其他要求的UI框架实现页面布局</li>");
 	w.load("<li class='writecode'>对Node.js有一定的了解</li>");
@@ -260,6 +265,7 @@ $(function() {
 	c.load("<div class='comment writecode'>&nbsp;*");
 	c.load("<div class='comment writecode'>&nbsp;*如果你想和我联系</div>");
 	c.load("<div class='comment writecode'>&nbsp;*QQ:893030579</div>");
+	c.load("<div class='comment writecode'>&nbsp;*VX:17343030061</div>");
 	c.load("<div class='comment writecode'>&nbsp;*最后非常感谢您愿意花3分钟看完我的简历！</div>");
 	c.load("<div class='comment writecode'>&nbsp;*/</div></p>");
 
