@@ -1,16 +1,211 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
-		<meta charset="utf-8" />
-		<title>简历</title>
-		<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
-		<script src="js/index.js"></script>
-		<link rel="stylesheet" href="css/index.css" />
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			body,
+			input {
+				margin: 0;
+				padding: 0;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #666;
+			}
+			
+			img {
+				border: none;
+				vertical-align: top;
+				pointer-events: none;
+			}
+			/*禁止图片放大*/
+			
+			input {
+				vertical-align: top;
+			}
+			
+			input {
+				outline: none;
+			}
+			
+			body {
+				font-family: "黑体";
+			}
+			
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+			}
+			/*解决苹果端点击出现黑框*/
+			
+			* {
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			}
+			
+			.app {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+				color: #333;
+			}
+			.appbg{
+				width: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: -1;
+			}
+			.itemBox {
+				display: flex;
+				align-items: center;
+				width: 80%;
+				margin: 2rem auto 0;
+			}
+			
+			.itemBox .name {
+				font-size: 0.6rem;
+				font-weight: 600;
+				color: #fff;
+			}
+			
+			.itemBox .inputBox {
+				width: 60%;
+				height: 0.8rem;
+			}
+			
+			.itemBox .inputBox input {
+				width: 100%;
+				height: 100%;
+				font-size: 0.6rem;
+			}
+			
+			.itemBox .num {
+				font-size: 0.6rem;
+				margin-left: 0.2rem;
+				color: red;
+			}
+			
+			.itemBox .unit {
+				font-size: 0.6rem;
+				margin-left: 0.2rem;
+				color: #fff;
+			}
+			
+			.load {
+				margin-top: 1rem;
+			}
+			
+			.pressure {
+				margin-top: 2rem;
+			}
+			
+			.run {
+				margin-top: 1rem;
+			}
+			.hint{
+				font-size: 0.4rem;
+				color: red;
+				width: 80%;
+				margin: 0.3rem auto 0;
+			}
+		</style>
 	</head>
+
 	<body>
-		<div id="content">
-			<pre id="style-text"></pre>
-			<pre id="work-text"></pre>
+		<div class="app">
+			<img class="appbg" src="imgs/appbg1.jpg"/>
+			<div class="itemBox temperature">
+				<div class="name">
+					温度：
+				</div>
+				<div class="inputBox">
+					<input id="degree" type="number" name="" value="" oninput="temperatureChange(value)" />
+				</div>
+				<div class="unit">
+					℃
+				</div>
+			</div>
+			<div class="hint">
+				注解：温度取值范围小于50℃
+			</div>
+			<div class="itemBox load">
+				<div class="name">
+					负荷：
+				</div>
+				<div class="inputBox">
+					<input id="loqad" type="number" name="" value="" oninput="loadChange(value)" />
+				</div>
+				<div class="unit">
+					MW
+				</div>
+			</div>
+			<div class="hint">
+				注解：负荷取值范围小于5000MW
+			</div>
+			<div class="itemBox pressure">
+				<div class="name">
+					最优背压：
+				</div>
+				<div class="num" id="pressureNum">
+					0
+				</div>
+				<div class="unit">
+					kPa
+				</div>
+			</div>
+
+			<div class="itemBox run">
+				<div class="name">
+					运行方式：
+				</div>
+				<div class="num" id="runNum">
+					0
+				</div>
+			</div>
 		</div>
 	</body>
+	<script>
+		document.documentElement.style.fontSize = window.innerWidth / 10 + 'px';
+		// 温度
+		function temperatureChange(value) {
+			if(value > 50) {
+				document.getElementById('degree').value = value.slice(0, value.length - 1)
+			} else {
+				calculation()
+			}
+
+		}
+		// 负荷
+		function loadChange(value) {
+			if(value > 9999) {
+				document.getElementById('loqad').value = value.slice(0, value.length - 1)
+			} else {
+				calculation()
+			}
+		}
+
+		function calculation() {
+			var numberOne = document.getElementById('degree').value
+			var numberTwo = document.getElementById('loqad').value
+			console.log(numberOne, numberTwo, '22222')
+			if(numberOne && numberOne > 0 && numberTwo && numberTwo > 0) {
+				var pressureText = numberOne * numberTwo + 12345
+				var runText = numberOne * numberTwo - 12345
+				document.getElementById('pressureNum').innerText = pressureText
+				document.getElementById('runNum').innerText = runText
+			} else {
+				document.getElementById('pressureNum').innerText = 0
+				document.getElementById('runNum').innerText = ''
+			}
+		}
+	</script>
+
 </html>
