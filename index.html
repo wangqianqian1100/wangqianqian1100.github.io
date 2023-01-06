@@ -55,14 +55,17 @@
 				left: 0;
 				overflow: hidden;
 				color: #333;
+				background: #dedede;
 			}
-			.appbg{
+			
+			.appbg {
 				width: 100%;
 				position: absolute;
 				left: 0;
 				top: 0;
 				z-index: -1;
 			}
+			
 			.itemBox {
 				display: flex;
 				align-items: center;
@@ -73,7 +76,6 @@
 			.itemBox .name {
 				font-size: 0.6rem;
 				font-weight: 600;
-				color: #fff;
 			}
 			
 			.itemBox .inputBox {
@@ -96,7 +98,6 @@
 			.itemBox .unit {
 				font-size: 0.6rem;
 				margin-left: 0.2rem;
-				color: #fff;
 			}
 			
 			.load {
@@ -110,7 +111,8 @@
 			.run {
 				margin-top: 1rem;
 			}
-			.hint{
+			
+			.hint {
 				font-size: 0.4rem;
 				color: red;
 				width: 80%;
@@ -121,7 +123,6 @@
 
 	<body>
 		<div class="app">
-			<img class="appbg" src="imgs/appbg1.jpg"/>
 			<div class="itemBox temperature">
 				<div class="name">
 					温度：
@@ -155,10 +156,7 @@
 					最优背压：
 				</div>
 				<div class="num" id="pressureNum">
-					0
-				</div>
-				<div class="unit">
-					kPa
+
 				</div>
 			</div>
 
@@ -167,7 +165,7 @@
 					运行方式：
 				</div>
 				<div class="num" id="runNum">
-					0
+
 				</div>
 			</div>
 		</div>
@@ -197,12 +195,31 @@
 			var numberTwo = document.getElementById('loqad').value
 			console.log(numberOne, numberTwo, '22222')
 			if(numberOne && numberOne > 0 && numberTwo && numberTwo > 0) {
-				var pressureText = numberOne * numberTwo + 12345
-				var runText = numberOne * numberTwo - 12345
+				var pressureText = ''
+				var runText = ''
+				if(numberOne < 15 && numberTwo >= 300 && numberTwo <= 600) {
+					pressureText = '尽量低'
+					runText = ''
+				} else if(numberOne >= 30 && numberTwo >= 300 && numberTwo <= 600) {
+					pressureText = '尽量低'
+					runText = ''
+				} else if(numberTwo < 300 || numberTwo > 600) {
+					pressureText = '请核对负荷'
+					runText = ''
+				} else if(numberOne >= 15 && numberOne < 20 && numberTwo > 400 && numberTwo <= 600) {
+					pressureText = (numberTwo / 100 + 2.5) + (numberOne - 15) / 5 * (1.3 + numberTwo / 100 - 4)
+					runText = ''
+				} else if(numberOne >= 20 && numberOne < 27 && numberTwo > 400 && numberTwo <= 600) {
+					pressureText = (numberTwo / 100 + 3.8) + (numberOne - 15) / 5 * 2
+					runText = ''
+				} else if(numberOne >= 27 && numberOne < 30 && numberTwo > 500 && numberTwo <= 600) {
+					pressureText = '尽量低'
+					runText = ''
+				}
 				document.getElementById('pressureNum').innerText = pressureText
 				document.getElementById('runNum').innerText = runText
 			} else {
-				document.getElementById('pressureNum').innerText = 0
+				document.getElementById('pressureNum').innerText = ''
 				document.getElementById('runNum').innerText = ''
 			}
 		}
