@@ -91,7 +91,6 @@
 			
 			.itemBox .num {
 				font-size: 0.6rem;
-				margin-left: 0.2rem;
 				color: red;
 			}
 			
@@ -183,7 +182,7 @@
 		}
 		// 负荷
 		function loadChange(value) {
-			if(value > 9999) {
+			if(value > 5000) {
 				document.getElementById('loqad').value = value.slice(0, value.length - 1)
 			} else {
 				calculation()
@@ -193,7 +192,6 @@
 		function calculation() {
 			var numberOne = document.getElementById('degree').value
 			var numberTwo = document.getElementById('loqad').value
-			console.log(numberOne, numberTwo, '22222')
 			if(numberOne && numberOne > 0 && numberTwo && numberTwo > 0) {
 				var pressureText = ''
 				var runText = ''
@@ -216,8 +214,16 @@
 					pressureText = '尽量低'
 					runText = ''
 				}
-				document.getElementById('pressureNum').innerText = pressureText
-				document.getElementById('runNum').innerText = runText
+				if(typeof pressureText === 'number') {
+					document.getElementById('pressureNum').innerText = pressureText.toFixed(3)
+				} else {
+					document.getElementById('pressureNum').innerText = pressureText
+				}
+				if(typeof runText === 'number') {
+					document.getElementById('runNum').innerText = runText.toFixed(3)
+				} else {
+					document.getElementById('runNum').innerText = runText
+				}
 			} else {
 				document.getElementById('pressureNum').innerText = ''
 				document.getElementById('runNum').innerText = ''
